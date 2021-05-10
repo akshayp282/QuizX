@@ -26,10 +26,10 @@
         <?php
         include 'partials/_dbconnect.php';
         $email = $_SESSION['email']; 
-                $q=mysqli_query($conn,"SELECT * FROM history WHERE email='$email' ORDER BY date DESC " );
+                $q=mysqli_query($conn,"SELECT DISTINCT * FROM history WHERE email='$email' ORDER BY date DESC " );
                         echo  '<div class="panel title" style="background:#FFF;">
                         <table class="table table-striped title1" >
-                        <tr style="color:black;"><td><center><b>S.N.</b></center></td><td><center><b>Quiz</b></center></td><td><center><b>Question Solved</b></center></td><td><center><b>Right</b></center></td><td><center><b>Wrong<b></center></td><td><center><b>Score</b></center></td>';
+                        <tr style="color:black;"><td><center><b>S.No.</b></center></td><td><center><b>Quiz Name</b></center></td><td><center><b>Question Solved</b></center></td><td><center><b>Right</b></center></td><td><center><b>Wrong<b></center></td><td><center><b>Score</b></center></td>';
                         $c=0;
                         while($row=mysqli_fetch_array($q))
                         {

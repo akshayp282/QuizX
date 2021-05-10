@@ -14,7 +14,16 @@
 
 <body>
     <?php include '_header.php'?>
-    <div class="container mt-5">
+    <div class="container my-3">
+        <div class="col">
+            <center>
+                <h1 class="text-light">
+                    <span id="count" class=" badge bg-danger">Be Quick</span>
+                </h1>
+            </center>
+        </div>
+    </div>
+    <div class="container mt-4">
         <div class="d-flex justify-content-center row ">
             <div class="col-md-10 col-lg-10">
                 <div class="border card-product">
@@ -24,6 +33,11 @@
                     $eid=@$_GET['eid'];
                     $sn=@$_GET['n'];
                     $total=@$_GET['t'];
+                    $sql1 = "SELECT * FROM `quizes` where eid = '$eid'";
+                    $res = mysqli_query($conn,$sql1);
+                    while($row = mysqli_fetch_array($res)){
+                        $GLOBALS['qtime'] = $row['qtime'];
+                    }
                     $sql = "SELECT * FROM `questions` where eid = '$eid' AND sno='$sn'";
                     $result = mysqli_query($conn, $sql);
                     echo'
@@ -46,7 +60,7 @@
                         $option=$row['option'];
                         $optionid=$row['optionid'];
                         echo '
-                        <form action="_update.php?subject='.$qname.'&q=quiz&step=2&eid='.$eid.'&n='.$sn.'&t='.$total.'&qid='.$qid.'" method="POST">
+                        <form id="myForm" action="_update.php?subject='.$qname.'&q=quiz&step=2&eid='.$eid.'&n='.$sn.'&t='.$total.'&qid='.$qid.'" method="POST">
                         <div class="ans ml-2">
                             <label class="radio"> <input type="radio" name="ans" value="'.$optionid.'"> <span>'.$option.'</span>
                             </label>
@@ -60,6 +74,29 @@
                 </form>';
                 ?>
                 </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="col">
+                <center>
+                    <h1 class="text-light visually-hidden">
+                        <span id="count" class=" badge bg-danger">Be Quick</span>
+                    </h1>
+                </center>
+                <script type="text/javascript">
+                var count = <?php echo $qtime;?>;
+                var interval = setInterval(function() {
+                        document.getElementById('count').innerHTML = count;
+                        count--;
+                        if (count === 0) {
+                            clearInterval(interval);
+                            document.getElementById('count').innerHTML = 'Done';
+                            //alert("You're out of time!"); 
+                            document.getElementById('myForm').submit();
+                        }
+                    },
+                    1000);
+                </script>
             </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"

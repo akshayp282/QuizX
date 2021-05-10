@@ -44,12 +44,12 @@
                                 <tr style="color:red"><td>Wrong Answer&nbsp;<span class="glyphicon glyphicon-remove-circle" aria-hidden="true"></span></td><td>'.$w.'</td></tr>
                                 <tr style="color:#66CCFF"><td>Score&nbsp;<span class="glyphicon glyphicon-star" aria-hidden="true"></span></td><td>'.$s.'</td></tr>';
                         }
-                        $q=mysqli_query($conn,"SELECT * FROM rank WHERE pname='$name'");
+                        /*$q=mysqli_query($conn,"SELECT * FROM rank WHERE pname='$name'");
                         while($row=mysqli_fetch_array($q) )
                         {
                             $s=$row['score'];
                             echo '<tr style="color:#990000"><td>Overall Score&nbsp;<span class="glyphicon glyphicon-stats" aria-hidden="true"></span></td><td>'.$s.'</td></tr>';
-                        }
+                        }*/
                         echo '</table></div>';
                         $q=mysqli_query($conn,"SELECT * FROM quizes WHERE eid='$eid'");
                         while($row=mysqli_fetch_array($q)){
@@ -60,15 +60,15 @@
                                 <strong>Success!</strong> You have passed the quiz.
                                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                 </div>';
-                            echo '<a class="btn btn-danger mx-2">Earn more score</a>';
-                            echo '<a class="btn btn-warning mx-2">Take another quiz</a>';
+                            echo '<a class="btn btn-danger mx-2" href="/QUIZ/student.php">Home</a>';
+                            echo '<a class="btn btn-warning mx-2" href="/QUIZ/quiz.php">Take another quiz</a>';
                         }
                         else{
                             echo '<div class="alert alert-danger alert-dismissible fade show my-0" role="alert">
                                 <strong>Oops!</strong> You could not score the passing marks.
                                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                 </div>';
-                            echo '<a class="btn btn-danger" href="_takequiz.php?subject='.$subject.'&eid='.$eid.'&n=1&t='.$total.'">Try Again</a>'; 
+                            echo '<a class="btn btn-danger" href="/QUIZ/quiz.php">Try Again</a>'; 
                         }
                     }   
         

@@ -27,9 +27,15 @@ echo '<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
          <li class="nav-item">
             <a class="nav-link active text-light fw-bold" aria-current="page" href="/Quiz/quiz.php">Quizes</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link active text-light fw-bold" aria-current="page" href="/Quiz/rank.php">Ranking</a>
-        </li>
+        <li class="nav-item">';
+            if($_SESSION['role'] == 'teacher'){
+              echo '<a class="nav-link active text-light fw-bold" aria-current="page" href="/Quiz/rank.php">History</a>';
+            }
+            else{
+              echo '<a class="nav-link active text-light fw-bold" aria-current="page" href="/Quiz/rank.php">Ranking</a>';
+            }
+            
+        echo'</li>
       </ul>'; 
       }
 if(isset($_SESSION['loggedin']) && $_SESSION['loggedin']==true){

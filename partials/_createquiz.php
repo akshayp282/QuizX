@@ -33,6 +33,7 @@
     $qwrong = $_POST['qwrong'];
     $qtotal = $_POST['qtotal'];
     $qpassing = $_POST['qpassing'];
+    $qtime = $_POST['qtime'];
     $cid = "SELECT cid FROM course where cname = '$cname'";
     $existSql = "SELECT * FROM quizes WHERE qname = '$qname'";
     $result = mysqli_query($conn, $existSql);
@@ -43,8 +44,8 @@
     else{
         $cid=$_SESSION['cid'];
         $id = uniqid();
-        $sql = "INSERT INTO `quizes` (`cid`,`eid`,`qname`, `qright`, `qwrong`, `qtotal`,`qpassing`, `qdate`) 
-        VALUES ('$cid','$id','$qname', '$qright', '$qwrong', '$qtotal','$qpassing',current_timestamp())";
+        $sql = "INSERT INTO `quizes` (`cid`,`eid`,`qname`, `qright`, `qwrong`, `qtotal`,`qpassing`, `qdate`,`qtime`) 
+        VALUES ('$cid','$id','$qname', '$qright', '$qwrong', '$qtotal','$qpassing',current_timestamp(),'$qtime')";
         $result = mysqli_query($conn, $sql);
             if($result){
                 $showAlert = true;
@@ -97,6 +98,11 @@
                             <input type="text" id="qpassing" name="qpassing" class="form-control"
                                 placeholder="Total Questions" required autofocus>
                             <label for="qpassing">Passing Marks</label>
+                        </div>
+                        <div class="form-label-group">
+                            <input type="number" id="qtime" name="qtime" class="form-control"
+                                placeholder="Total Questions" required autofocus>
+                            <label for="qtime">Time Limit Per Question</label>
                         </div>
                         <button class="btn btn-lg btn-success btn-block text-uppercase" type="submit">Create
                             Quiz</button>

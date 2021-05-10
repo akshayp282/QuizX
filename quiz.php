@@ -56,9 +56,9 @@
                                     Quiz</a>';
                                 }
                                 if(isset($_SESSION['role']) && $_SESSION['role'] == 'teacher') {
-                                    echo '<a href="/QUIZ/partials/_modifyquiz.php?subject='.$qname.'" class="btn btn-warning mb-2">Modify
-                                    Quiz</a>
-                                <a href="/QUIZ/partials/_deletequiz.php?op=delete&subject='.$qname.'&eid='.$eid.'" class="btn btn-danger mx-2">Delete
+                                    /*echo '<a href="/QUIZ/partials/_modifyquiz.php?subject='.$qname.'" class="btn btn-warning mb-2">Modify
+                                    Quiz</a>*/
+                                   echo ' <a href="/QUIZ/partials/_deletequiz.php?op=delete&subject='.$qname.'&eid='.$eid.'" class="btn btn-danger mb-2">Delete
                                     Quiz</a>';
                                 }    
                        echo'</div>

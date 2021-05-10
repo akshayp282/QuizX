@@ -38,7 +38,7 @@
                                 <p>Marks : '.$qright * $qtotal.'</p>
                                 <p>Negative Marking : '.$qwrong.' </p>';
                                 if(isset($_SESSION['role']) && $_SESSION['role'] == 'teacher'){
-                                    echo '<a href="/QUIZ/partials/_modifyquiz.php?subject='.$qname.'&eid='.$eid.'&op=edq" class="btn btn-danger mb-2 mx-2">Edit Questions</a>
+                                    echo '<a href="/QUIZ/partials/_modifyquiz.php?subject='.$qname.'&eid='.$eid.'&op=edq" class="btn btn-danger mb-2 mx-2">Edit Questions</a>';
                                 }    
                        echo'</div>
                     </div>';   
@@ -47,7 +47,7 @@
             </div>';
 if(@$_GET['op'] == 'edq'){
              echo '<div class="col-md-8 bg-white">
-             <div class="d-flex justify-content-center row">
+             <div class="d-flex justify-content-center row card-product">
                 <div class="border card-product">'; 
                     include '_dbconnect.php';
                     $qname = $_GET['subject'];

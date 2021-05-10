@@ -17,7 +17,7 @@
     <?php 
     if(isset($_GET['quizcreated']) && $_GET['quizcreated'] == 'true'){
                 echo '<div class="alert alert-success alert-dismissible fade show my-0" role="alert">
-                <strong>Success!</strong> A new quiz has been created.
+                <strong>Success!</strong> A new quiz has been created. Please add questions.
                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                 </div>';
                 unset($_GET['quizcreated']);
