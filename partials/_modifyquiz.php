@@ -39,7 +39,6 @@
                                 <p>Negative Marking : '.$qwrong.' </p>';
                                 if(isset($_SESSION['role']) && $_SESSION['role'] == 'teacher'){
                                     echo '<a href="/QUIZ/partials/_modifyquiz.php?subject='.$qname.'&eid='.$eid.'&op=edq" class="btn btn-danger mb-2 mx-2">Edit Questions</a>
-                                    <a href="/QUIZ/partials/_modifyquiz.php?subject='.$qname.'&eid='.$eid.'&op=edm" class="btn btn-warning mb-2 mx-2">Edit Marks</a>';
                                 }    
                        echo'</div>
                     </div>';   
@@ -86,9 +85,6 @@ if(@$_GET['op'] == 'edq'){
     </div></div>
     ';
     }
-            if(@$_GET['op'] == 'edm'){
-                echo '';
-            }
             ?>
 
             </div>
