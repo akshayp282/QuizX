@@ -2,7 +2,7 @@
 
 **Version 1.0.0**
 ---
-#Description
+# Description
 
 QuizX is a fully dynamic website that offers you two roles.
 1. Student : A student can view his/her quiz history, take a quiz, view their ranking among other students.
@@ -10,7 +10,7 @@ QuizX is a fully dynamic website that offers you two roles.
    Teacher can see the history of quiz attempts made by students.
 ---
 
-#Executing the project
+# Executing the project
 
 Take a look at the project : www.quizx.rf.gd
 
@@ -28,7 +28,7 @@ To execute the project in your local machine:
 
 ---
 
-#Help
+# Help
 If you encounter any error, feel free to ping me.
 
 Have a good day :).
