@@ -8,6 +8,7 @@ QuizX is a fully dynamic website that offers you two roles.
 1. Student : A student can view his/her quiz history, take a quiz, view their ranking among other students.
 2. Teacher : A teacher can create/edit/delete a course, create a quiz for a course, view and delete quizes created by him/her and also by other teachers.
    Teacher can see the history of quiz attempts made by students.
+![Screenshot (509)](https://user-images.githubusercontent.com/62919502/117778739-949cbc80-b25b-11eb-81d5-6af3911bfa00.png)
 ---
 
 # Executing the project
