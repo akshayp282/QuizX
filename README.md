@@ -30,6 +30,5 @@ To execute the project in your local machine:
 
 #Help
 If you encounter any error, feel free to ping me.
-And also, feel free to use the source code for a project.
 
 Have a good day :).
