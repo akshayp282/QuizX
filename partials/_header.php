@@ -2,7 +2,7 @@
 session_start();
 echo '<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/QUIZ"><img src="https://img.icons8.com/ios/50/000000/quiz.png"/></a>
+    <a class="navbar-brand" disabled><img src="https://img.icons8.com/ios/50/000000/quiz.png"/></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -10,11 +10,11 @@ echo '<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">';
         if(isset($_SESSION['role'])){
-          echo '<a class="nav-link active text-light fw-bold" aria-current="page" href="/Quiz/'.$_SESSION["role"].'.php?'.$_SESSION["role"].'">Home</a>
+          echo '<a class="nav-link active text-light fw-bold" aria-current="page" href="/'.$_SESSION["role"].'.php?'.$_SESSION["role"].'">Home</a>
         </li>';
         }
         else{
-          echo '<a class="nav-link active text-light fw-bold" aria-current="page" href="/Quiz/index.php">Home</a>
+          echo '<a class="nav-link active text-light fw-bold" aria-current="page" href="/index.php">Home</a>
         </li>';
         }
       if(isset($_SESSION['role']) && $_SESSION['role'] == 'teacher'){
@@ -72,11 +72,11 @@ echo '<div class="alert alert-danger alert-dismissible fade show my-0" role="ale
 unset($_GET['signupsuccess']);
 }
 
-/*
 else if(isset($_SESSION['unreg_user']) && $_SESSION['unreg_user'] == true){
 echo '<div class="alert alert-danger alert-dismissible fade show my-0" role="alert">
-    <strong> Hey Stranger!</strong> You gotta sign up before logging in my friend.
+    <strong> Hey Stranger!</strong> Please sign up before logging in.
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>';
-}*/
+unset($_GET['unreg_user']);
+}
 ?>

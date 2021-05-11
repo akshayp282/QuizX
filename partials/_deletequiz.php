@@ -16,7 +16,7 @@ if(isset($_SESSION['role']) && $_SESSION['role']=='teacher')
     $result3 = mysqli_query($conn, $sql3);
     $result4 = mysqli_query($conn, $sql4);
     if($result && $result2 && $result3 && $result4){
-        header("Location: /QUIZ/quiz.php?quizDeleted=true");
+        header("Location: ../quiz.php?quizDeleted=true");
         exit();
     }       
     }

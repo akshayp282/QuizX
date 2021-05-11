@@ -19,12 +19,12 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
             $result = mysqli_query($conn, $sql);
             if($result){
                 $showAlert = true;
-                header("Location: /QUIZ/teacher.php?courseCreated=true");
+                header("Location: ../teacher.php?courseCreated=true");
                 exit();
             }
             
     }
-    header("location: /QUIZ/teacher.php?courseCreated=false&error=$showError");
+    header("location: ../teacher.php?courseCreated=false&error=$showError");
     }
     else if(@$_GET['op']== 'edit'){
     $cname = $_POST['cname'];
@@ -40,12 +40,12 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
             $result = mysqli_query($conn, $sql);
             if($result){
                 $showAlert = true;
-                header("Location: /QUIZ/teacher.php?courseUpdated=true");
+                header("Location: ../teacher.php?courseUpdated=true");
                 exit();
             }
             
     }
-    header("location: /QUIZ/teacher.php?courseUpdated=false&error=$showError");
+    header("location: ../teacher.php?courseUpdated=false&error=$showError");
     }
     else if(@$_GET['op']== 'delete'){
     $cname = $_POST['cname'];
@@ -60,12 +60,12 @@ if($_SERVER['REQUEST_METHOD'] == "POST"){
             $result = mysqli_query($conn, $sql);
             if($result){
                 $showAlert = true;
-                header("Location: /QUIZ/teacher.php?courseDeleted=true");
+                header("Location: ../teacher.php?courseDeleted=true");
                 exit();
             }
             
     }
-    header("location: /QUIZ/teacher.php?courseDeleted=false&error=$showError");
+    header("location: ../teacher.php?courseDeleted=false&error=$showError");
     }
   }
 }

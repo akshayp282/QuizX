@@ -35,7 +35,6 @@
                                     placeholder="Email address" required autofocus>
                                 <label for="inputEmailin">Email address</label>
                             </div>
-
                             <div class="form-label-group">
                                 <input type="password" id="inputPasswordin" name="inputPasswordin" class="form-control"
                                     placeholder="Password" required>
@@ -43,39 +42,10 @@
                             </div>
                             <button class="btn btn-lg btn-success btn-block text-uppercase" type="submit">Sign
                                 in</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-5 mx-auto">
-                <div class="card card-signin my-5">
-                    <div class="card-body">
-                        <h5 class="card-title text-center">Sign Up</h5>
-                        <form class="form-signin" action="/partials/_handleSignup.php" method="post">
                             <div class="form-label-group">
-                                <input type="text" id="inputname" name="inputname" class="form-control"
-                                    placeholder="Email address" required autofocus>
-                                <label for="inputname">Name</label>
+                                <span class="text-muted">Don't have an account?</span>
+                                <?php echo '<a href="signup.php?role='.$role.'">Register</a> Here'; ?>
                             </div>
-                            <div class="form-label-group">
-                                <input type="email" id="inputEmail" name="inputEmail" class="form-control"
-                                    placeholder="Email address" required autofocus>
-                                <label for="inputEmail">Email address</label>
-                            </div>
-
-                            <div class="form-label-group">
-                                <input type="password" id="inputPassword" name="inputPassword"
-                                    action="/partials/_handleLogin.php" method="post" class="form-control"
-                                    placeholder="Password" required>
-                                <label for="inputPassword">Password</label>
-                            </div>
-                            <div class="form-label-group">
-                                <input type="password" id="inputcPassword" name="inputcPassword" class="form-control"
-                                    placeholder="Password" required>
-                                <label for="inputcPassword">Confirm Password</label>
-                            </div>
-                            <button class="btn btn-lg btn-danger btn-block text-uppercase" type="submit">Sign
-                                up</button>
                         </form>
                     </div>
                 </div>

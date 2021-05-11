@@ -28,28 +28,6 @@
             <div class="col-sm-12 col-md-6 col-lg-5 mx-auto">
                 <div class="card card-signin my-5">
                     <div class="card-body">
-                        <h5 class="card-title text-center">Sign In</h5>
-                        <form class="form-signin" action="/partials/_handleLogin.php" method="post">
-                            <div class="form-label-group">
-                                <input type="email" id="inputEmailin" name="inputEmailin" class="form-control"
-                                    placeholder="Email address" required autofocus>
-                                <label for="inputEmailin">Email address</label>
-                            </div>
-
-                            <div class="form-label-group">
-                                <input type="password" id="inputPasswordin" name="inputPasswordin" class="form-control"
-                                    placeholder="Password" required>
-                                <label for="inputPasswordin">Password</label>
-                            </div>
-                            <button class="btn btn-lg btn-success btn-block text-uppercase" type="submit">Sign
-                                in</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-5 mx-auto">
-                <div class="card card-signin my-5">
-                    <div class="card-body">
                         <h5 class="card-title text-center">Sign Up</h5>
                         <form class="form-signin" action="/partials/_handleSignup.php" method="post">
                             <div class="form-label-group">

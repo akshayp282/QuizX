@@ -24,7 +24,7 @@ if($method == 'POST'){
             $result = mysqli_query($conn, $sql);
             if($result){
                 $showAlert = true;
-                header("Location: /QUIZ/main.php?signupsuccess=true&role=$role");
+                header("Location: ../signin.php?signupsuccess=true&role=$role");
                 exit();
             }
         }
@@ -32,7 +32,7 @@ if($method == 'POST'){
             $showError = "Passwords do not match";
             }
     }
-    header("Location: /QUIZ/main.php?signupsuccess=false&error=$showError&role=$role");
+    header("Location: ../signin.php?signupsuccess=false&error=$showError&role=$role");
 }
 
 ?>

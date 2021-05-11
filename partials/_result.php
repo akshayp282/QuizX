@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    <link rel="stylesheet" href="/QUIZ/style.css">
+    <link rel="stylesheet" href="../style.css">
     <title>QuizX</title>
 </head>
 
@@ -60,15 +60,15 @@
                                 <strong>Success!</strong> You have passed the quiz.
                                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                 </div>';
-                            echo '<a class="btn btn-danger mx-2" href="/QUIZ/student.php">Home</a>';
-                            echo '<a class="btn btn-warning mx-2" href="/QUIZ/quiz.php">Take another quiz</a>';
+                            echo '<a class="btn btn-danger mx-2" href="student.php">Home</a>';
+                            echo '<a class="btn btn-warning mx-2" href="quiz.php">Take another quiz</a>';
                         }
                         else{
                             echo '<div class="alert alert-danger alert-dismissible fade show my-0" role="alert">
                                 <strong>Oops!</strong> You could not score the passing marks.
                                 <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                                 </div>';
-                            echo '<a class="btn btn-danger" href="/QUIZ/quiz.php">Try Again</a>'; 
+                            echo '<a class="btn btn-danger" href="quiz.php">Try Again</a>'; 
                         }
                     }   
         

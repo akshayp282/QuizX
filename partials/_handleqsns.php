@@ -34,8 +34,8 @@ session_start();
         $qans = mysqli_query($conn,$sql2);
     }
         if($qans){
-            header("location: /QUIZ/teacher.php?quizcreated=true");
+            header("location: ../teacher.php?quizcreated=true");
             exit();
         }
-    header("location: /QUIZ/teacher.php?quizcreated=false&error=$qans");
+    header("location: ../teacher.php?quizcreated=false&error=$qans");
     ?>

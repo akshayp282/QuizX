@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-    <link rel="stylesheet" href="/QUIZ/style2.css">
+    <link rel="stylesheet" href="../style2.css">
     <title>QuizX</title>
 </head>
 
@@ -38,7 +38,7 @@
                                 <p>Marks : '.$qright * $qtotal.'</p>
                                 <p>Negative Marking : '.$qwrong.' </p>';
                                 if(isset($_SESSION['role']) && $_SESSION['role'] == 'teacher'){
-                                    echo '<a href="/QUIZ/partials/_modifyquiz.php?subject='.$qname.'&eid='.$eid.'&op=edq" class="btn btn-danger mb-2 mx-2">Edit Questions</a>';
+                                    echo '<a href="_modifyquiz.php?subject='.$qname.'&eid='.$eid.'&op=edq" class="btn btn-danger mb-2 mx-2">Edit Questions</a>';
                                 }    
                        echo'</div>
                     </div>';   
