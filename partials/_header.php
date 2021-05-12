@@ -9,7 +9,7 @@ echo '<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">';
-        if(isset($_SESSION['role'])){
+        if(isset($_SESSION['role']) && isset($_SESSION['email']){
           echo '<a class="nav-link active text-light fw-bold" aria-current="page" href="/'.$_SESSION["role"].'.php?'.$_SESSION["role"].'">Home</a>
         </li>';
         }
@@ -17,7 +17,7 @@ echo '<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
           echo '<a class="nav-link active text-light fw-bold" aria-current="page" href="/index.php">Home</a>
         </li>';
         }
-      if(isset($_SESSION['role']) && $_SESSION['role'] == 'teacher'){
+      if(isset($_SESSION['role']) && $_SESSION['role'] == 'teacher' && isset($_SESSION['email'])){
         echo '
         <li class="nav-item">
           <a class="nav-link active text-light fw-bold" aria-current="page" href="/Quiz/'.$_SESSION["role"].'.php"?'.$_SESSION["role"].'>Courses</a>
