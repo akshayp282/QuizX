@@ -52,8 +52,18 @@
                                     Quiz</a>';
                                 }
                                 else if(isset($_SESSION['role']) && $_SESSION['role'] == 'student'){
+                                    $email = $_SESSION['email'];
+                                    $sql1 = "SELECT * FROM `history` where email = '$email' and eid = '$eid'";
+                                    $result1 = mysqli_query($conn, $sql1);
+                                    $numRows = mysqli_num_rows($result1);
+                                    if($numRows > 0){
+                                        echo '<a href="/QUIZ/partials/_takequiz.php?subject='.$qname.'&eid='.$eid.'&n=1&t='.$qtotal.'&retake=1" class="btn btn-danger mb-2">Retake
+                                    this Quiz</a>';
+                                    }    
+                                    else{
                                     echo '<a href="/QUIZ/partials/_takequiz.php?subject='.$qname.'&eid='.$eid.'&n=1&t='.$qtotal.'" class="btn btn-danger mb-2">Take
                                     Quiz</a>';
+                                    }
                                 }
                                 if(isset($_SESSION['role']) && $_SESSION['role'] == 'teacher') {
                                     /*echo '<a href="/QUIZ/partials/_modifyquiz.php?subject='.$qname.'" class="btn btn-warning mb-2">Modify
