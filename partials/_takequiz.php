@@ -33,6 +33,13 @@
                     $eid=@$_GET['eid'];
                     $sn=@$_GET['n'];
                     $total=@$_GET['t'];
+                    $retake=@$_GET['retake'];
+                    $email = $_SESSION['email'];
+                    if($retake == '1'){
+                        $sqll = "DELETE FROM `history` where email = '$email' and eid = '$eid'";
+                        $q=mysqli_query($conn,$sqll);
+                        unset($retake);
+                    }
                     $sql1 = "SELECT * FROM `quizes` where eid = '$eid'";
                     $res = mysqli_query($conn,$sql1);
                     while($row = mysqli_fetch_array($res)){
